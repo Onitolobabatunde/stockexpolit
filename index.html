@@ -8,21 +8,23 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="path/to/red-hat-display-font.css">
     
     <!-- Custom CSS for 1200px width -->
     <style>
         body {
-            padding-top: 56px;
+            font-family: 'Red Hat Display', sans-serif;
         }
 
         @media (min-width: 768px) {
             body {
-                padding-top: 72px;
+                /* padding-top: 72px; */
             }
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1600px;
         }
 
         .container-bg {
@@ -33,6 +35,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      width: 150vh;
       color: #fff; /* Text color, change as needed */
     }
 
@@ -50,48 +53,101 @@
     .straight-line {
       display: flex;
       align-items: center;
-      background-color: blue;
+      background-color: #247EE4;
     }
-    </style>
+
+    /* CSS used here will be applied after bootstrap.css */
+
+.navbar-header{
+	background:#e7e7e7;;
+  position:relative;
+}
+
+.custom-button {
+      background-color: #fff; /* White background */
+      color: #fff; /* White text color */
+      border: 1px solid #fff; /* White border (optional) */
+    }
+    
+.col-md-6 .straight line fs-4 .halfWrapper {
+ color: #fff;
+  font-family: monospace;
+  font-size: 26px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #4EB2DF;
+  display: inline-block;
+  padding-bottom: 0px !important;
+  margin-bottom: 0px !important;
+}
+/* CSS used here will be applied after bootstrap.css */
+
+.navbar-header{
+	background:#e7e7e7;;
+  position:relative;
+}
+
+.custom-container {
+  width: 1600px; /* Set your desired width */
+      height: 100px; /* Set your desired height */
+      background: linear-gradient(to right, #247EE4 50%, #ffff 50%)
+}
+
+</style>
 </head>
 
 <body>
 
-    
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-9">
-              <a class="navbar-brand" href="#">Features</a>
-              <a class="navbar-brand" href="#">Roadmap</a>
-              <a class="navbar-brand" href="#">Pricing</a>
-              <a class="navbar-brand" href="#">Pricing</a>
-              <a class="navbar-brand" href="#">FAQ</a>
-              </div>
-              <div class="col-md-3">
-                <a class="navbar-brand" href="#">(801) 966-4272</a>
-                </div>
-              </div>
-            </div>
+  <nav class="navbar navbar-expand custom-container navbar-dark text-white" aria-label="Third navbar example">
+    <div class="container">
+      <a class="navbar-brand ms-5" href="#">
+        <img src="./assets/Logo.png" class="rounded mx-auto d-block" alt="..." width="200" height="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse " id="navbarsExample03">
+        <ul class="navbar-nav me-auto mb-1 mb-sm-0 ">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Featuring</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">RoadMap</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active">FAQ</a>
+          </li>
+        </ul>
+        <div class="d-flex flex-row-reverse">
+          <div class="p-2" style="color: black;">(801) 966-4272</div> 
+          <div class="p-2" style="color: #247EE4;">
+            <img src="./assets/phone-call.png" class="rounded mx-auto d-block" alt="..." width="20" height="">
           </div>
-      </nav>
-             
+        </div>
+        </div>
+      </div>
+    </div>
+  </nav>
 
     <!-- Main Content -->
     <div class="container">
         <!-- Your content goes here -->
       <div class="row">
-        <div class="col-md-6 straight line">  
+        <div class="col-md-6 custom-header mt-1" style="padding: 0; background-color: #247EE4; color: #fff;">
+          <p style="padding: 100px 50px 20px 100px; font-weight: bold;"> Less Words, More Value</p>
+          <h1 style="padding: 15px 50px 20px 100px; font-weight: bold; font-size: 60px;">Grow up with our <br> community <br>of  traders</h1>
+          <p style="padding: 15px 0px 0px 100px">Developed by traders. </p>
+          <p style="padding: 0px 50px 20px 100px">Grow with us, learn new trading strategies, create your own strategies and get money for your subscription</p>         <div class="d-grid gap-3">
+              <button type="button" class="btn btn-light" style="color: #247EE4; font-size: 20px; margin: 15px 50px 20px 100px;"> Get Started</button>
+            </div>
+            </div>
+            <div class="col-6" style="padding: 20px 20px 20px 20px;">
+              <img src="./assets/phones.png" class="rounded mx-auto d-block" alt="..." width="650" height="700">
+            </div>
 
-          <p> Less Words, More Value</p>
-          <h1 class="pt-5">Grow up with our community  of traders</h1>
-          <p class="pt-5">Developed by traders for traders.  Grow with us, learn new trading strategies, create your own strategies and get money for your subscription</p>
-        
-            <button type="button" class="btn btn-lg btn-primary" disabled>Primary button</button>
-            </div>
-            <div class="col-6">
-              <img src="./assets/phones.png" class="rounded mx-auto d-block" alt="..." width="600" height="600">
-            </div>
       </div> 
     </div>
 
@@ -107,30 +163,26 @@
           </div>
   </div>
 
-   <!-- Main Content 3 -->
-   <div class="container mt-5">
-    <!-- Your content goes here -->
-  <div class="row">
-    <div class="col-6">
-   <img src="./assets/Middle.png" class="rounded mx-auto d-block" alt="...">
-        </div>
+   <!-- Main Content 3 -->  
+   <div class="container-fluid mt-5">
+    <div class="text-center">
+      <img src="./assets/Middle.png" class="rounded mx-auto d-block" alt="..." width="1200" height="400">
+    </div>
   </div>
-  
 
    <!-- Main Content 4 -->
    <div class="container-fluid mt-5 container-bg">
     <div class="text-center">
       <img src="./assets/Logo.png" class="rounded mx-auto d-block" alt="..." width="200" height="40">
       <p>Analysis of all markets, more than 1000 + trading pairs, <br> large variety of brokers</p>
-      <button type="button" class="btn btn-lg btn-primary">Primary button</button>
-    
+      <button type="button" class="btn btn-lg btn-light" style="color: #247EE4; font-size: 20px; margin: 15px 50px 20px 100px; padding: 10px 40px 10px 40px;" >Get Started</button>
     </div>
   </div>
 
     <!-- Main Content -->
-    <div class="container mt-5">
+    <div class="container mt-5 p-4">
       <!-- Your content goes here -->
-    <div class="row">
+    <div class="row align-items-center justify-content-center" style="padding-left: 100px ;">
       <div class="col-6">  
         <h1>Community Effect</h1>
         <p>Our community has a high winrate of their strategies. This gives you the opportunity to subscribe to them and earn much more than investing in standard markets</p>
@@ -141,7 +193,7 @@
     </div> 
   </div>
 
-  <div class="container-fluid mt-5">
+  <div class="container-fluid mt-5 rounded mx-auto d-block">
     <div class="">
       <h1 class="text-center">Increase your earnings with StockExploit</h1>
       <p class="text-center">You have the opportunity to create your own successful trading strategy and share trades with your community for a price you set yourself!</p>
@@ -166,14 +218,6 @@
           <div class="text-center">
             <h1>Road Map</h1>
           </div>
-        </div>
-
-
-
-        <div class="container-fluid container-bg1">
-          <div class=""></div>
-          <div class=""></div>
-          <div class=""></div>
         </div>
   </div>
   </div>
